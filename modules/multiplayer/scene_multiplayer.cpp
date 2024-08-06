@@ -308,7 +308,7 @@ void SceneMultiplayer::_process_sys(int p_from, const uint8_t *p_packet, int p_p
 			bool should_process = false;
 			if (get_unique_id() == 1) { // I am the server.
 				// Direct messages to server should not go through relay.
-				ERR_FAIL_COND(peer > 0 && !connected_peers.has(peer));
+				// ERR_FAIL_COND(peer > 0 && !connected_peers.has(peer));
 				if(peer > 0 && !connected_peers.has(peer)){
 					return;
 				}
